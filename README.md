@@ -26,7 +26,7 @@ dynamiska gränssnitt.
 1. Klona repot:
 
    ```bash
-   git clone https://github.com/ditt-användarnamn/ditt-repo.git
+   git clone https://github.com/Per-Ostojin/rectangles-table-generator
 
    ```
 
