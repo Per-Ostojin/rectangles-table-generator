@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: #fefefe;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 2em;
+}
+
+.step-1 {
+    background-color: #eee;
+    text-align: center;
+}
+
+.step-2 {
+    background-color: #f8f8f8;
+}
+
+.section label {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.section select {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    font-size: 16px;
+    margin: 0.5em auto;
+}
+
+.section button {
+    display: block;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.section button:enabled {
+    background: dodgerblue;
+    color: white;
+}
+
+.instructions {
+    font-size: smaller;
+    color: gray;
+}
+
+#input-file-content {
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 90%;
+    max-width: 400px;
+    height: 10em;
+    overflow-y: auto;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: small;
+    text-align: left;
+}
+
+table#output {
+    margin: 1em auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 600px;
+    visibility: hidden;
+}
+
+table th {
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #ccc;
+    width: 32px;
+    height: 32px;
+}
+
+table thead {
+    background: #eeeeee;
+}
+
+table tbody {
+    background: #fefefe;
+}
+
+table tbody .hx,
+table tbody .hy {
+    text-align: right;
+    background-color: #eee;
+    color: #999;
+    font-size: x-small;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+#tstatus {
+    text-align: center;
+    color: #cccccc;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .section {
+        padding: 1em;
+    }
+
+    .section select,
+    .section button {
+        font-size: 14px;
+        padding: 0.5em;
+        max-width: 100%;
+    }
+
+    #input-file-content {
+        height: 8em;
+    }
+
+    table td {
+        width: 24px;
+        height: 24px;
+    }
+
+    table#output {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 0.5em;
+    }
+
+    .section select,
+    .section button {
+        font-size: 12px;
+    }
+
+    #input-file-content {
+        height: 6em;
+    }
+
+    table td {
+        width: 20px;
+        height: 20px;
+    }
+
+    table#output {
+        font-size: 12px;
+    }
+}

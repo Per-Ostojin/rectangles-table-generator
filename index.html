@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangles in the Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="rectangles-table-generator.js"></script>
+</head>
+<body>
+
+<div class="section step-1">
+    <h1>Rectangles Table</h1>
+
+    <div id="input-container">
+        <label for="json-file-selector">Select a JSON file:</label>
+        <select id="json-file-selector">
+            <option value="rectangles-0-19.json">File 1</option>
+            <option value="rectangles-diagonal-0-9.json">File 2</option>
+            <option value="rectangles-diagonal-1-5.json">File 3</option>
+            <option value="rectangles-shape-1a.json">File 4</option>
+            <option value="rectangles-shape-1b.json">File 5</option>
+            <option value="rectangles-shapes-1.json">File 6</option>
+            <option value="rectangles-shapes-2.json">File 7</option>
+            <option value="rectangles-shapes-3-collapse-space.json">File 8</option>
+            <option value="rectangles-shapes-4-collapse-space.json">File 9</option>
+            <!-- Lägg till fler alternativ här för dina andra JSON-filer -->
+        </select>
+        <button id="load-json-file">Load File</button>
+        <div id="input-file-content"></div>
+        <label>
+            <input type="checkbox" id="use-spans"> Use col/row spans when generating table
+        </label>
+        <label>
+            <input type="checkbox" id="use-condensed-space-mode" checked> Use condensed empty space mode 
+            <br />
+            <span id="use-collapse-space-hint" class="instructions" style="visibility:hidden;">
+                NOTE: collapsing empty space for columns only works when spans are not used
+            </span>
+        </label>
+        <button id="generate-table" disabled>Generate</button>
+    </div>
+
+    <p class="instructions">
+        Select a JSON file, then click "Load File" to see its content. You can then generate the table.
+    </p>
+</div>
+
+<div class="section step-2 output">
+    <table id="output">
+        <thead>
+            <tr>
+                <th colspan="100%">Rectangles</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <hr/>
+    <p id="tstatus">Rendered table will be displayed when generated.</p>
+</div>
+
+</body>
+</html>
